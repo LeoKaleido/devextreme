@@ -1,0 +1,1 @@
+export const serverOrigin = 'https://www.agrieuro.com'

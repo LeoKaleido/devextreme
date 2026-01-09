@@ -13,6 +13,7 @@ import CurrencyCell from './cells/ActionsCell/ActionsCell';
 import { ColorBox, TextBox } from 'devextreme-react';
 import { DateBox } from 'devextreme-react/date-box';
 import { DateRangeBox } from 'devextreme-react/date-range-box';
+import { serverOrigin } from './hardcoded';
 
 function App() {
 
@@ -86,7 +87,7 @@ function App() {
                     mergedFilter = filterValue || loadOptions.filter || null;
                 }
                 const { skip = 0, take = 15 } = loadOptions;
-                return fetch(`http://127.0.0.1:4000/orders?skip=${skip}&take=${take}`, {
+                return fetch(`${serverOrigin}/orders?skip=${skip}&take=${take}`, {
                     method: 'POST',
                     body: JSON.stringify({
                         filters: mergedFilter,
@@ -118,7 +119,7 @@ function App() {
     const headerFilterDataSource = useMemo(() => ({
         load: (loadOptions) => {
             const { skip = 0, take = 15 } = loadOptions;
-            return fetch(`http://127.0.0.1:4000/orders?skip=${skip}&take=${take}`, {
+            return fetch(`${serverOrigin}/orders?skip=${skip}&take=${take}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
