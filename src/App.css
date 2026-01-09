@@ -1,0 +1,54 @@
+body {
+}
+
+.kalei__datagrid {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.kalei__loading {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Stili per la toolbar */
+.kalei__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.kalei__toolbar-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.kalei__toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.kalei__selection-info {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive toolbar */
+@media (max-width: 768px) {
+    .kalei__toolbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .kalei__toolbar-left,
+    .kalei__toolbar-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

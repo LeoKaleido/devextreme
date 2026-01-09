@@ -1,0 +1,11 @@
+
+
+
+.flag-container {
+    display: flex;
+    align-items: center;
+}
+.flag-container img {
+    width: 20px;
+    height: 20px;
+}
